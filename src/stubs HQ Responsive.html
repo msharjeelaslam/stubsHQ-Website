@@ -43,35 +43,39 @@
         
     </nav>
 
-    <div id="popup" class="grid grid-cols-1 gap-y-8 max-w-140  hidden min-w-112 mx-3  p-5 border border-black lg:hidden">
+    <div id="popupWrapper"  class="hidden  inset-0 flex justify-center items-center ">
+        <div id="popup" class="grid grid-cols-1 mx-3  max-w-140   min-w-112 p-8 gap-y-4   border border-black lg:hidden">
 
             <div  class="text-lg font-sans   text-gray-500 grid grid-cols-1 gap-y-4">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Team</a>
-                <a href="">Services</a>
-                <a href="">Process</a>
-                <a href="">Contact</a>
+                <a class=" hover:text-black transition ease-in duration-100 " href="">Home</a>
+                <a class="hover:text-black transition ease-in duration-100" href="">About</a>
+                <a class="hover:text-black transition ease-in duration-100" href="">Team</a>
+                <a class="hover:text-black transition ease-in duration-100" href="">Services</a>
+                <a class="hover:text-black transition ease-in duration-100" href="">Process</a>
+                <a class="hover:text-black transition ease-in duration-100" href="">Contact</a>
 
             </div>
 
             
-            <button id="btnInPopup"  class="font-sans text-lg  min-h-10   bg-blue-500  text-white flex justify-center items-center min-w-100 max-w-140  hover:cursor-pointer hover:translate-y-[-3px] transition ease-in duration-100  rounded-lg " >Start Your MVP</button>
+            <button id="btnInPopup"  class="font-sans text-lg  min-h-10 mt-2  bg-blue-500  text-white flex justify-center items-center min-w-100     hover:cursor-pointer hover:translate-y-[-3px] transition ease-in duration-100  rounded-lg " >Start Your MVP</button>
 
             
             
 
      </div>
+    </div>
+    
 
         <script>
 
         function showPopup(){
             document.getElementById("popup").style.display = "block"
-            document.getElementById("btnInPopup").style.marginLeft = "20px"
-            document.getElementById("btnInPopup").style.marginTop = "15px"
+            document.getElementById("popupWrapper").classList.remove("hidden");
             document.getElementById("menuBtnInNav").style.display = "none"
             document.getElementById("crossBtnInNav").style.display = "block"
             document.getElementById("crossBtnInNav").style.marginTop = "10px"
+          
+            
             
 
         }
@@ -81,10 +85,11 @@
             document.getElementById("menuBtnInNav").style.display = "block"
             document.getElementById("crossBtnInNav").style.display = "none"
             document.getElementById("menuBtnInNav").style.marginTop = "10px"
+            document.getElementById("popupWrapper").classList.add("hidden");
         }
 
          window.addEventListener("resize", () => {
-            if (window.innerWidth >= 1024) { // lg breakpoint (default Tailwind)
+            if (window.innerWidth >= 1024) { 
                 document.getElementById("popup").style.display = "none"
                 document.getElementById("menuBtnInNav").style.display = "none"
                 document.getElementById("crossBtnInNav").style.display = "none"
