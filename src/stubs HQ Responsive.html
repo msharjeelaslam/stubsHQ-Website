@@ -9,14 +9,14 @@
 <body>
     
 
-    <nav class="flex justify-between  w-full fixed max-h-20  border border-gray-200 p-5  ">
+    <nav class="flex justify-between items centre flex-wrap  w-full sticky top-0 left-0 bg-white  z-50 max-h-20  border border-gray-200 p-5  ">
 
         
-        <div class="flex items-center">
-            <div class="text-2xl text-blue-500 font-bold cursor-pointer"> Stubs HQ</div>
-        </div>
+        
+        <div class="text-2xl text-blue-500 font-bold cursor-pointer px-4"> Stubs HQ</div>
+        
 
-        <div class="text-lg font-sans py-2  text-gray-500 flex gap-x-8 hidden md:flex ">
+        <div class="text-lg font-sans py-2  text-gray-500 flex gap-x-8 hidden lg:flex ">
             <a class=" hover:text-black transition ease duration-75" href="">Home</a> 
             <a class="hover:text-black transition ease duration-75" href="">About</a>
             <a class="hover:text-black transition ease duration-75" href="">Team</a>
@@ -30,13 +30,81 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
             </div>
 
-            <div class="   max-h-11 rounded-lg flex justify-center items-center -mx-2  bg-white   md:hidden">
+           <div id="menuBtnInNav" onclick="showPopup()"  class="   max-h-11 rounded-lg flex justify-center items-center -mx-2  bg-white hover:cursor-pointer  lg:hidden ">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
             </div>
-            <button class="font-sans text-base min-w-36 max-h-11 bg-blue-500 -mx-2 text-white flex justify-center items-center p-2 hover:cursor-pointer hover:translate-y-[-3px] transition ease-in duration-100  rounded-lg hidden md:flex">Start Your MVP</button>
+
+            <div onclick="closePopup()" id="crossBtnInNav" class="   max-h-11 hidden rounded-lg flex justify-center items-center -mx-2  bg-white hover:cursor-pointer   lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </div>
+            <button class="font-sans text-base min-w-36 max-h-11 bg-blue-500 -mx-2 text-white flex justify-center items-center p-2 hover:cursor-pointer hover:translate-y-[-3px] transition ease-in duration-100  rounded-lg hidden lg:flex">Start Your MVP</button>
         </div>
 
+        
     </nav>
+
+    <div id="popup" class="grid grid-cols-1 gap-y-8 max-w-140  hidden min-w-112 mx-3  p-5 border border-black lg:hidden">
+
+            <div  class="text-lg font-sans   text-gray-500 grid grid-cols-1 gap-y-4">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Team</a>
+                <a href="">Services</a>
+                <a href="">Process</a>
+                <a href="">Contact</a>
+
+            </div>
+
+            
+            <button id="btnInPopup"  class="font-sans text-lg  min-h-10   bg-blue-500  text-white flex justify-center items-center min-w-100 max-w-140  hover:cursor-pointer hover:translate-y-[-3px] transition ease-in duration-100  rounded-lg " >Start Your MVP</button>
+
+            
+            
+
+     </div>
+
+        <script>
+
+        function showPopup(){
+            document.getElementById("popup").style.display = "block"
+            document.getElementById("btnInPopup").style.marginLeft = "20px"
+            document.getElementById("btnInPopup").style.marginTop = "15px"
+            document.getElementById("menuBtnInNav").style.display = "none"
+            document.getElementById("crossBtnInNav").style.display = "block"
+            document.getElementById("crossBtnInNav").style.marginTop = "10px"
+            
+
+        }
+
+        function closePopup(){
+            document.getElementById("popup").style.display = "none"
+            document.getElementById("menuBtnInNav").style.display = "block"
+            document.getElementById("crossBtnInNav").style.display = "none"
+            document.getElementById("menuBtnInNav").style.marginTop = "10px"
+        }
+
+         window.addEventListener("resize", () => {
+            if (window.innerWidth >= 1024) { // lg breakpoint (default Tailwind)
+                document.getElementById("popup").style.display = "none"
+                document.getElementById("menuBtnInNav").style.display = "none"
+                document.getElementById("crossBtnInNav").style.display = "none"
+            }
+
+            if(window.innerWidth < 1024){
+                if( document.getElementById("popup").style.display === "block"){
+                    document.getElementById("menuBtnInNav").style.display = "none"
+                }
+                else{
+                    document.getElementById("menuBtnInNav").style.display = "block"
+                    document.getElementById("menuBtnInNav").style.marginTop = "10px"
+                }
+            }
+        });
+
+        
+
+     </script>  
+   
 
 
 </body>
