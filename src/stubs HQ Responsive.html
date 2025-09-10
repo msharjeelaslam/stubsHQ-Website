@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stubs HQ</title>
     <link rel="stylesheet" href="../dist/output.css">
 </head>
 <body>
     
 
-    <nav class="flex justify-between items centre flex-wrap  w-full sticky top-0 left-0 bg-white  z-50 max-h-20  border border-gray-200 p-5  ">
+    <nav class="flex justify-between  flex-wrap  w-full sticky top-0 left-0 bg-white  z-50 max-h-16  border border-gray-200 p-5  ">
 
         
         
-        <div class="text-2xl text-blue-500 font-bold cursor-pointer px-4"> Stubs HQ</div>
+        <div class="text-2xl text-blue-500 font-bold cursor-pointer -mt-1 px-4 "> Stubs HQ</div>
         
 
-        <div class="text-lg font-sans py-2  text-gray-500 flex gap-x-8 hidden lg:flex ">
+        <div class="text-lg font-sans   text-gray-500 flex gap-x-8 hidden lg:flex ">
             <a class=" hover:text-black transition ease duration-75" href="">Home</a> 
             <a class="hover:text-black transition ease duration-75" href="">About</a>
             <a class="hover:text-black transition ease duration-75" href="">Team</a>
@@ -25,8 +25,8 @@
             <a class="hover:text-black transition ease duration-75" href="">Contact</a>
         </div>
 
-        <div class="flex gap-x-4 mx-1 md:mx-2 lg:mx-6 ">
-            <div class="border border-gray-200 max-h-11 rounded-lg flex justify-center items-center px-3 py-4 hover:bg-purple-600 transition ease-in duration-100 hover:text-white  bg-white">
+        <div class="flex translate-y-[-10px] gap-x-4 mx-1 md:mx-2 lg:mx-6 ">
+            <div class="border border-gray-200 max-h-11 rounded-lg flex justify-center items-center px-3 py-3 hover:bg-purple-600 transition ease-in duration-100 hover:text-white  bg-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
             </div>
 
@@ -43,27 +43,65 @@
         
     </nav>
 
-    <div id="popupWrapper"  class="hidden  inset-0 flex justify-center items-center ">
-        <div id="popup" class="grid grid-cols-1 mx-3  max-w-140   min-w-112 p-8 gap-y-4   border border-gray-300 rounded-lg mt-2 lg:hidden">
+        <div id="popupWrapper"  class="hidden  inset-0 flex justify-center items-center ">
+            <div id="popup" class="grid grid-cols-1 mx-3  max-w-140   min-w-112 p-8 gap-y-4   border border-gray-300 rounded-lg mt-2 lg:hidden">
 
-            <div  class="text-lg font-sans   text-gray-500 grid grid-cols-1 gap-y-4">
-                <a class=" hover:text-black transition ease-in duration-100 " href="">Home</a>
-                <a class="hover:text-black transition ease-in duration-100" href="">About</a>
-                <a class="hover:text-black transition ease-in duration-100" href="">Team</a>
-                <a class="hover:text-black transition ease-in duration-100" href="">Services</a>
-                <a class="hover:text-black transition ease-in duration-100" href="">Process</a>
-                <a class="hover:text-black transition ease-in duration-100" href="">Contact</a>
+                <div  class="text-lg font-sans   text-gray-500 grid grid-cols-1 gap-y-4">
+                    <a class="hover:text-black transition ease-in duration-100 " href="">Home</a>
+                    <a class="hover:text-black transition ease-in duration-100" href="">About</a>
+                    <a class="hover:text-black transition ease-in duration-100" href="">Team</a>
+                    <a class="hover:text-black transition ease-in duration-100" href="">Services</a>
+                    <a class="hover:text-black transition ease-in duration-100" href="">Process</a>
+                    <a class="hover:text-black transition ease-in duration-100" href="">Contact</a>
+
+                </div>
+
+            
+                <button id="btnInPopup"  class="font-sans text-lg  min-h-10 mt-2  bg-blue-500  text-white flex justify-center items-center min-w-100     hover:cursor-pointer hover:translate-y-[-3px] transition ease-in duration-100  rounded-lg " >Start Your MVP</button>
+
+            
+            </div>
+        </div>
+
+        <div class=" grid grid-cols-1 gap-y-3 p-5 lg:grid-cols-2 " >
+            
+            <div class="lg:max-w-160">
+
+                <div class="text-[40px] text-black font-sans -mt-2 font-bold leading-tight tracking-tight md:text-[57px] md:font-extrabold md:leading-none md:tracking-normal lg:text-[70px] ">Build Your MVP Under $10K</div>
+
+                <div class="text-[37px] text-blue-600  tracking-tight font-sans font-bold md:text-[55px] md:font-extrabold md:tracking-normal md:leading-none lg:text-[70px] lg:mt-2">From idea to Launch</div>
+
+                <div class="text-[21px] text-gray-500 font-sans max-w-190 mt-6  md:text-2xl lg:text-[26px]  ">We specialize in building cost effective MVPs that validate your vision and accelerate your path to market</div>
+
+                <button class="bg-blue-600 text-lg font-medium  text-white w-64 py-3.5 mt-7 rounded-xl hover:translate-y-[-3px]  transition ease-in duration-100 ">Start Your Project</button>
+
+                <div class="grid grid-rows-1 grid-cols-3 text-center max-w-160 mt-14 ">
+
+                    <div class="hover:translate-y-[-5px] transition ease-in duration-100">
+                        <div class="text-4xl text-blue-500 font-sans font-bold">$10K</div>
+                        <div class="text-base text-gray-500">Average cost</div>
+                    </div>
+
+                    <div class="hover:translate-y-[-5px] transition ease-in duration-100">
+                        <div class="text-4xl text-blue-500 font-sans font-bold">6</div>
+                        <div class="text-base text-gray-500 leading-tight">Expert Team Members</div>
+                    </div>
+
+                    <div class="hover:translate-y-[-5px] transition ease-in duration-100">
+                        <div class="text-4xl text-blue-500 font-sans font-bold">100+</div>
+                        <div class="text-base text-gray-500 ">Ideas Validated</div>
+                    </div>
+
+                </div>
 
             </div>
 
+            <div class="hidden lg:block">
+                <img class="lg:ml-10" src="robot.png" alt="">
+            </div>
             
-            <button id="btnInPopup"  class="font-sans text-lg  min-h-10 mt-2  bg-blue-500  text-white flex justify-center items-center min-w-100     hover:cursor-pointer hover:translate-y-[-3px] transition ease-in duration-100  rounded-lg " >Start Your MVP</button>
 
-            
-            
-
-     </div>
-    </div>
+        </div>
     
 
         <script>
