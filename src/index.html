@@ -49,12 +49,12 @@
             <div id="popup" class="grid grid-cols-1 mx-3  max-w-140   min-w-112 p-8 gap-y-4   border border-gray-300 rounded-2xl mt-2 lg:hidden">
 
                 <div  class="text-lg font-sans   text-gray-500 grid grid-cols-1 gap-y-4">
-                    <a class="hover:text-black transition ease-in duration-100 " href="">Home</a>
-                    <a class="hover:text-black transition ease-in duration-100" href="">About</a>
-                    <a class="hover:text-black transition ease-in duration-100" href="">Team</a>
-                    <a class="hover:text-black transition ease-in duration-100" href="">Services</a>
-                    <a class="hover:text-black transition ease-in duration-100" href="">Process</a>
-                    <a class="hover:text-black transition ease-in duration-100" href="">Contact</a>
+                    <a class="hover:text-black transition ease-in duration-100 " href="#section1">Home</a>
+                    <a class="hover:text-black transition ease-in duration-100" href="#section2">About</a>
+                    <a class="hover:text-black transition ease-in duration-100" href="#section3">Team</a>
+                    <a class="hover:text-black transition ease-in duration-100" href="#section4">Services</a>
+                    <a class="hover:text-black transition ease-in duration-100" href="#section5">Process</a>
+                    <a class="hover:text-black transition ease-in duration-100" href="#section6">Contact</a>
 
                 </div>
 
@@ -69,7 +69,7 @@
 
     
 
-        <div id="section1" class=" grid grid-cols-1 gap-y-3 p-5 lg:grid-cols-2 lg:p-7 bg-[url('/src/bgpic.jpg')] bg-no-repeat bg-cover md:bg-cover lg:bg-cover bg-center bg-white/70 bg-blend-overlay " >
+        <div id="section1" class=" grid grid-cols-1 gap-y-3 p-5 lg:grid-cols-2 lg:p-7 bg-[url('/src/bgpic.jpg')] bg-no-repeat bg-cover md:bg-cover lg:bg-cover bg-center bg-white/70 bg-blend-overlay scroll-mt-15 " >
             
             <div class="lg:max-w-160">
 
@@ -194,7 +194,7 @@
 
         </div>
         
-       <div id="section3" class="flex justify-center items-center" >
+       <div id="section3" class="flex justify-center items-center " >
          <div class="py-18 px-5 text-center grid grid-cols-1 gap-y-6 ">
             <div  >
                 <span class="text-4xl font-sans font-bold md:text-5xl">Meet Our</span> 
@@ -818,7 +818,7 @@
             </div>
         </div>
            
-        <div id="section5" >
+        <div id="section5" class="scroll-mt-12" >
             <div class="grid grid-cols-1 gap-y-7 text-center p-6 mb-6 ">
                 <div class="text-4xl font-sans font-bold">
                     <span>Our Proven</span> <span class="text-blue-600">Process</span>
@@ -1007,7 +1007,7 @@
 
 
 
-        <div id="section6" class="grid grid-cols-1 lg:grid-cols-2 md:pl-8">
+        <div id="section6" class="grid grid-cols-1 lg:grid-cols-2 md:pl-8 scroll-mt-12">
 
             <div class="grid grid-cols-1 gap-y-6 p-5  lg:min-w-136 ">
 
@@ -1159,6 +1159,16 @@
             }
         });
 
+
+
+
+
+        // Grab all links inside the popup
+  document.querySelectorAll("#popupWrapper a").forEach(link => {
+    link.addEventListener("click", () => {
+      closePopup();  // call your existing closePopup function
+    });
+  });
         
 
      </script>  
